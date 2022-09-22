@@ -1,4 +1,24 @@
 body {
-    /* background: cadetblue; */
-    background-image: url(/assets/images/javascriptimage.png)
+    background: cadetblue;
+    /* background-image: url(/assets/images/javascriptimage.png);
+    background-repeat: no-repeat ;
+    /* background-position: center;  */
+    padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+} 
+#mainHeader {
+    display: flex;
+    justify-content: center;
+}
+#questionArea {
+    display: flex;
+    justify-content: center;
+}
+#answerArea {
+    display: flex;
+    justify-content: center;
 }
