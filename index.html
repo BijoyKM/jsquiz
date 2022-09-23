@@ -9,26 +9,42 @@
     <meta name="keywords" content="Javascript, quiz, test, multiple choice questions">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body >
+    <!-- Main Heading -->
     <div id="mainHeader">
         <h1>Javascript Quiz</h1>
+        <!-- <p>Following Javascript Quiz will contain 10 multiple choice questions.</p> -->
     </div>
+    <!-- User information block -->
+    <!-- <div id="playerInfo">
+        <h2 id="playerNameInput">Please enter your Name:</h2>
+        <input type = 'text' id="playerName" required>
+        <input type = "submit"  value="Submit" onclick ="playerHello ()"
+        >
+    </div> -->
+    <!--  -->
+    <div id = "mainBox">
     <div id="questionArea">
         <h2>Question</h2>
     </div>
     <div id="answerArea">
-        <button>Answer A</button>
-        <button>Answer B</button>
-        <button>Answer C</button>
-        <button>Answer D</button>
+        <button class="btn">Answer A</button>
+        <button class="btn">Answer B</button>
+        <button class="btn">Answer C</button>
+        <button class="btn">Answer D</button>
     </div>
+    <div id="quizManage">
     <div id="startQ">
-        <button>Start Quiz</button>
+        <button id="startBtn" class="start-Btn btn">Start Quiz</button>
+        <button id="nextBtn" class="next-Btn btn hide">Next Question</button>
     </div>
 <div id="exitQ">
-    <button>Quit</button>
+    <button id="ExitBtn" class="exit-Btn btn hide">Quit</button>
+</div>
+</div>
 </div>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/questions.js"></script>
+    
 </body>
 </html>

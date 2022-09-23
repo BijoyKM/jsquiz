@@ -1,19 +1,19 @@
 const questions = [{
         question: "Javascript is an _______ language?",
         answers: [{
-                choice: "Object-Oriented",
+                choice: "A. Object-Oriented",
                 "is_correct": true,
             },
             {
-                choice: "Object-Based",
+                choice: "B. Object-Based",
                 "is_correct": false,
             },
             {
-                choice: "Procedural",
+                choice: "C. Procedural",
                 "is_correct": false,
             },
             {
-                choice: "None of the above",
+                choice: "D. None of the above",
                 "is_correct": false,
             }
         ]
@@ -21,19 +21,19 @@ const questions = [{
     {
         question: "Which of the following keywords is used to define a variable in Javascript?",
         answers: [{
-                choice: "var",
+                choice: "A. var",
                 "is_correct": false,
             },
             {
-                choice: "let",
+                choice: "B. let",
                 "is_correct": false,
             },
             {
-                choice: "Both A and B",
+                choice: "C. Both A and B",
                 "is_correct": true,
             },
             {
-                choice: "None of the above",
+                choice: "D. None of the above",
                 "is_correct": false,
             }
         ]
@@ -41,19 +41,19 @@ const questions = [{
     {
         question: "Which of the following methods is used to access HTML elements using Javascript?",
         answers: [{
-                choice: "getElementbyId()",
+                choice: "A. getElementbyId()",
                 "is_correct": false,
             },
             {
-                choice: "getElementsByClassName()",
+                choice: "B. getElementsByClassName()",
                 "is_correct": false,
             },
             {
-                choice: "Both A and B",
+                choice: "C. Both A and B",
                 "is_correct": true,
             },
             {
-                choice: "None of the above",
+                choice: "D. None of the above",
                 "is_correct": false,
             }
         ]
@@ -61,19 +61,19 @@ const questions = [{
     {
         question: "Which of the following methods can be used to display data in some form using Javascript?",
         answers: [{
-                choice: "document.write()",
+                choice: "A. document.write()",
                 "is_correct": false,
             },
             {
-                choice: "console.log()",
+                choice: "B. console.log()",
                 "is_correct": false,
             },
             {
-                choice: "window.alert()",
+                choice: "C. window.alert()",
                 "is_correct": false,
             },
             {
-                choice: "All of the above",
+                choice: "D. All of the above",
                 "is_correct": true,
             }
         ]
@@ -81,19 +81,19 @@ const questions = [{
     {
         question: "How can a datatype be declared to be a constant type?",
         answers: [{
-                choice: "const",
+                choice: "A. const",
                 "is_correct": true,
             },
             {
-                choice: "var",
+                choice: "B. var",
                 "is_correct": false,
             },
             {
-                choice: "let",
+                choice: "C. let",
                 "is_correct": false,
             },
             {
-                choice: "constant",
+                choice: "D. constant",
                 "is_correct": false,
             }
         ]
@@ -101,19 +101,19 @@ const questions = [{
     {
         question: "When the switch statement matches the expression with the given labels, how is the comparison done?",
         answers: [{
-                choice: "Both the datatype and the result of the expression are compared.",
+                choice: "A. Both the datatype and the result of the expression are compared.",
                 "is_correct": true,
             },
             {
-                choice: "Only the datatype of the expression is compared.",
+                choice: "B. Only the datatype of the expression is compared.",
                 "is_correct": false,
             },
             {
-                choice: "Only the value of the expression is compared.",
+                choice: "C. Only the value of the expression is compared.",
                 "is_correct": false,
             },
             {
-                choice: "None of the above",
+                choice: "D. None of the above",
                 "is_correct": false,
             }
         ]
@@ -121,19 +121,19 @@ const questions = [{
     {
         question: "What keyword is used to check whether a given property is valid or not?",
         answers: [{
-                choice: "in Correct",
+                choice: "A. in Correct",
                 "is_correct": false,
             },
             {
-                choice: "is in",
+                choice: "B. is in",
                 "is_correct": true,
             },
             {
-                choice: "exists",
+                choice: "C. exists",
                 "is_correct": false,
             },
             {
-                choice: "lies",
+                choice: "D. lies",
                 "is_correct": false,
             }
         ]
@@ -141,19 +141,19 @@ const questions = [{
     {
         question: "When an operator's value is NULL, the typeof returned by the unary operator is:",
         answers: [{
-                choice: "Boolean",
+                choice: "A. Boolean",
                 "is_correct": false,
             },
             {
-                choice: "Undefined",
+                choice: "B. Undefined",
                 "is_correct": false,
             },
             {
-                choice: "Object",
+                choice: "C. Object",
                 "is_correct": true,
             },
             {
-                choice: "Integer",
+                choice: "D. Integer",
                 "is_correct": false,
             }
         ]
@@ -161,19 +161,19 @@ const questions = [{
     {
         question: "How are objects compared when they are checked with the strict equality operator?",
         answers: [{
-                choice: "The contents of the object are compared.",
+                choice: "A. The contents of the object are compared.",
                 "is_correct": false,
             },
             {
-                choice: "Their references are compared.",
+                choice: "B. Their references are compared.",
                 "is_correct": true,
             },
             {
-                choice: "Both A and B",
+                choice: "C. Both A and B",
                 "is_correct": false,
             },
             {
-                choice: "None of the above",
+                choice: "D. None of the above",
                 "is_correct": false,
             }
         ]
@@ -185,19 +185,19 @@ const questions = [{
                          document.write(a);
                           </script></code>`,
         answers: [{
-                choice: "Compiltaion Error",
+                choice: "A. Compiltaion Error",
                 "is_correct": true,
             },
             {
-                choice: "14",
+                choice: "B. 14",
                 "is_correct": false,
             },
             {
-                choice: "Runtime Error",
+                choice: "C. Runtime Error",
                 "is_correct": false,
             },
             {
-                choice: "59",
+                choice: "D. 59",
                 "is_correct": true,
             }
         ]
@@ -209,19 +209,19 @@ print(a);
 print(b);
  </code>`,
         answers: [{
-                choice: "-Infinity Infinity",
+                choice: "A. -Infinity Infinity",
                 "is_correct": true,
             },
             {
-                choice: "Infinity -Infinity",
+                choice: "B. Infinity -Infinity",
                 "is_correct": false,
             },
             {
-                choice: "Infinity Infinity",
+                choice: "C. Infinity Infinity",
                 "is_correct": false,
             },
             {
-                choice: "-Infinity Infinity",
+                choice: "D. -Infinity Infinity",
                 "is_correct": false,
             }
         ]
@@ -231,19 +231,19 @@ print(b);
 print(a)
 </code>`,
         answers: [{
-                choice: "3",
+                choice: "A. 3",
                 "is_correct": false,
             },
             {
-                choice: "0",
+                choice: "B. 0",
                 "is_correct": false,
             },
             {
-                choice: "Error",
+                choice: "C. Error",
                 "is_correct": false,
             },
             {
-                choice: "5",
+                choice: "D. 5",
                 "is_correct": true,
             }
         ]
@@ -251,19 +251,19 @@ print(a)
     {
         question: `What will be the output of the following code snippet? <code>print(typeof(NaN));</code>`,
         answers: [{
-                choice: "Object",
+                choice: "A. Object",
                 "is_correct": false,
             },
             {
-                choice: "Number",
+                choice: "B. Number",
                 "is_correct": true,
             },
             {
-                choice: "String",
+                choice: "C. String",
                 "is_correct": false,
             },
             {
-                choice: "None of the above",
+                choice: "D. None of the above",
                 "is_correct": false,
             }
         ]
@@ -273,19 +273,19 @@ print(a)
 print(a.slice(2, 4));
 </code>`,
         answers: [{
-                choice: "3, 4",
+                choice: "A. 3, 4",
                 "is_correct": false,
             },
             {
-                choice: "2, 3",
+                choice: "B. 2, 3",
                 "is_correct": false,
             },
             {
-                choice: "3, 4, 5",
+                choice: "C. 3, 4, 5",
                 "is_correct": false,
             },
             {
-                choice: "2, 3, 4",
+                choice: "D. 2, 3, 4",
                 "is_correct": true,
             }
         ]
@@ -296,19 +296,19 @@ const obj2 = {Name: "Hello", Age: 16};
 print(obj1 === obj2);
 </code>`,
         answers: [{
-                choice: "true",
+                choice: "A. true",
                 "is_correct": false,
             },
             {
-                choice: "false",
+                choice: "B. false",
                 "is_correct": true,
             },
             {
-                choice: "Undefined",
+                choice: "C. Undefined",
                 "is_correct": false,
             },
             {
-                choice: "None of the above",
+                choice: "D. None of the above",
                 "is_correct": false,
             }
         ]
@@ -320,19 +320,19 @@ print("I am a dog.");
 }
 dog.sound = "Bark";</code>`,
         answers: [{
-                choice: "Syntax Error",
+                choice: "A. Syntax Error",
                 "is_correct": false,
             },
             {
-                choice: "'Iam a dog' gets printed",
+                choice: "B. 'Iam a dog' gets printed",
                 "is_correct": false,
             },
             {
-                choice: "Reference Error",
+                choice: "C. Reference Error",
                 "is_correct": false,
             },
             {
-                choice: "Nothing happens",
+                choice: "D. Nothing happens",
                 "is_correct": true,
             }
         ]
@@ -343,19 +343,19 @@ dog.sound = "Bark";</code>`,
 }
 test(12);</code>`,
         answers: [{
-                choice: "NaN",
+                choice: "A. NaN",
                 "is_correct": false,
             },
             {
-                choice: "Number",
+                choice: "B. Number",
                 "is_correct": false,
             },
             {
-                choice: "Object",
+                choice: "C. Object",
                 "is_correct": true,
             },
             {
-                choice: "Array",
+                choice: "D. Array",
                 "is_correct": false,
             }
         ]
@@ -364,19 +364,19 @@ test(12);</code>`,
         question: `What will be the output of the following code snippet? <code>const obj1 = {first: 20, second: 30, first: 50};
 console.log(obj1);</code>`,
         answers: [{
-                choice: "{first:20, second:30}",
+                choice: "A. {first:20, second:30}",
                 "is_correct": false,
             },
             {
-                choice: "{first:50, second:30}",
+                choice: "B. {first:50, second:30}",
                 "is_correct": true,
             },
             {
-                choice: "{first:20, second:30, first:50}",
+                choice: "C. {first:20, second:30, first:50}",
                 "is_correct": false,
             },
             {
-                choice: "Syntax Error",
+                choice: "D. Syntax Error",
                 "is_correct": false,
             }
         ]
@@ -384,19 +384,19 @@ console.log(obj1);</code>`,
     {
         question: "Which object in Javascript doesn't have a prototype?",
         answers: [{
-                choice: "Base Object",
+                choice: "A. Base Object",
                 "is_correct": true,
             },
             {
-                choice: "All objects have a prototype",
+                choice: "B. All objects have a prototype",
                 "is_correct": false,
             },
             {
-                choice: "None of the objects have a prototype",
+                choice: "C. None of the objects have a prototype",
                 "is_correct": false,
             },
             {
-                choice: "None of the above",
+                choice: "D. None of the above",
                 "is_correct": false,
             }
         ]
@@ -404,21 +404,21 @@ console.log(obj1);</code>`,
     {
         question: "Which of the following is not a Javascript framework?",
         answers: [{
-                choice: "Node",
+                choice: "A. Node",
                 "is_correct": false,
             },
             {
-                choice: "Vue",
+                choice: "B. Vue",
                 "is_correct": false,
             },
             {
-                choice: "React",
+                choice: "C. React",
                 "is_correct": false,
             },
             {
-                choice: "Cassandra",
+                choice: "D. Cassandra",
                 "is_correct": true,
             }
         ]
-    },
+    }
 ]
