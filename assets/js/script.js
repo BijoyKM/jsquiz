@@ -7,7 +7,10 @@
 // } else  alert("Please fill out the name field.");
 
 // }
+const startBtn = document.getElementById('startBtn')
+const questionAreaElem = document.getElementById('questionArea')
 
+startBtn.addEventListener('click', startQuiz)
 
 function getQuestions (count) {
     for (var i = 0; i < count; i++) {
@@ -16,6 +19,16 @@ function getQuestions (count) {
     }
 }
 
+function startQuiz () {
+console.log("Quiz is started")
+startBtn.classList.add("hide")
+questionAreaElem.classList.remove("hide")
+
+}
+
+function getNextQuestion() {
+
+}
 
 
 
