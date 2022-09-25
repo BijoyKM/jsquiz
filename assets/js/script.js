@@ -62,6 +62,7 @@ function clearState () {
     nextButn.classList.add("hide")
     while (quizAnsElem.firstChild) {
         quizAnsElem.removeChild(quizAnsElem.firstChild)
+        
     }
 }
 
