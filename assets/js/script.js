@@ -18,6 +18,10 @@ const quizAnsElem = document.querySelector('#answerArea')
 
 
 startButn.addEventListener('click', startQuiz)
+nextButn.addEventListener('click', () => {
+    currentQuesNum++
+    getNextQuestion()
+})
 
 // function getQuestions (count) {
 //     for (var i = 0; i < count; i++) {
@@ -55,7 +59,12 @@ function showQuizQues (question) {
 }
 
 function answerSelect(event) {
-
+const answerSelected = event.target
+const correct = answerSelected.dataset.is_correct
+setQuizStatus(document.body, correct)
+Array.from(quizAnsElem.children).forEach(answerButton => {
+    setQuizStatus(answerButton, answerButton.dataset.is_correct)
+})
 }
 
 function clearState () {
@@ -66,6 +75,18 @@ function clearState () {
     }
 }
 
+function setQuizStatus(element, correct) {
+    clearQuizStatus(element)
+    if (correct) {
+        element.classList.add('correct')
+    } else {
+        element.classList.add('wrong')
+    }
+}
 
+function clearQuizStatus(element) {
+    element.classList.add('correct')
+    element.classList.remove('wrong')
+}
 
 
