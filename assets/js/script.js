@@ -50,8 +50,8 @@ function showQuizQues (question) {
         const answerButton = document.createElement('button')
         answerButton.innerText = answer.choice
         answerButton.classList.add('btn')
-        if(answer.is_correct) {
-            answerButton.dataset.correct = answer.is_correct
+        if(answer.correct) {
+            answerButton.dataset.correct = answer.correct
         }
         answerButton.addEventListener('click', answerSelect)
         quizAnsElem.appendChild(answerButton)
@@ -60,13 +60,19 @@ function showQuizQues (question) {
 
 function answerSelect(event) {
 const answerSelected = event.target
-const correct = answerSelected.dataset.is_correct
+const correct = answerSelected.dataset.correct
+console.log(correct)
 setQuizStatus(document.body, correct)
 Array.from(quizAnsElem.children).forEach(answerButton => {
-    setQuizStatus(answerButton, answerButton.dataset.is_correct)
+    setQuizStatus(answerButton, answerButton.dataset.correct)
 })
+if(questionsShuffle.length > currentQuesNum + 1) {
+nextButn.classList.remove('hide')
+} else {
+    startButn.innerText = 'Try Again'
+    startButn.classList.remove('hide')
 }
-
+}
 function clearState () {
     nextButn.classList.add("hide")
     while (quizAnsElem.firstChild) {
@@ -85,7 +91,7 @@ function setQuizStatus(element, correct) {
 }
 
 function clearQuizStatus(element) {
-    element.classList.add('correct')
+    element.classList.remove('correct')
     element.classList.remove('wrong')
 }
 
