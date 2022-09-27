@@ -1,18 +1,12 @@
-// let playerName = document.getElementById('playerName');
-
-// function playerHello () {
-// if (playerName.value == String) {
-//     playerNameInput.innerHTML = "";
-//     playerNameInput.innerHTML = "Hello " + playerName.value + ", Welcome to the JS Quiz. <br>Please Enjoy";  
-// } else  alert("Please fill out the name field.");
-
-// }
+const qInfo = document.querySelector('#quizInfo')
 const startButn = document.querySelector('#startBtn')
 const nextButn = document.querySelector('#nextBtn')
+const exitButn = document.querySelector('#exitBtn')
 const questionAreaElem = document.querySelector('#questionArea')
 let questionsShuffle, currentQuesNum
 const quizQuesElem = document.querySelector('#question')
 const quizAnsElem = document.querySelector('#answerArea')
+let score = 0
 
 
 
@@ -32,7 +26,9 @@ nextButn.addEventListener('click', () => {
 
 function startQuiz () {
 console.log("Quiz is started")
+qInfo.classList.add("hide")
 startButn.classList.add("hide")
+
 questionsShuffle = questions.sort(() => (Math.random() - .5))
 currentQuesNum = 0
 questionAreaElem.classList.remove("hide")
@@ -68,13 +64,21 @@ Array.from(quizAnsElem.children).forEach(answerButton => {
 })
 if(questionsShuffle.length > currentQuesNum + 1) {
 nextButn.classList.remove('hide')
+exitButn.innerText = 'Exit'
+exitButn.classList.remove("hide")
 } else {
-    startButn.innerText = 'Try Again'
+    startButn.innerText = 'Start Again'
+    
+    console.log(score)
     startButn.classList.remove('hide')
+    
+    
 }
 }
 function clearState () {
+    // clearStatusClass(document.body)
     nextButn.classList.add("hide")
+    exitButn.classList.add("hide")
     while (quizAnsElem.firstChild) {
         quizAnsElem.removeChild(quizAnsElem.firstChild)
         
@@ -87,12 +91,12 @@ function setQuizStatus(element, correct) {
         element.classList.add('correct')
     } else {
         element.classList.add('wrong')
+       
     }
 }
 
 function clearQuizStatus(element) {
+    
     element.classList.remove('correct')
     element.classList.remove('wrong')
 }
-
-

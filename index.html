@@ -13,16 +13,10 @@
     <!-- Main Heading -->
     <div id="mainHeader">
         <h1>Javascript Quiz</h1>
-        <!-- <p>Following Javascript Quiz will contain 10 multiple choice questions.</p> -->
+        <p id="quizInfo">The Following 20 questions will test your knowledge in Javascript.</p>
+        
     </div>
-    <!-- User information block -->
-    <!-- <div id="playerInfo">
-        <h2 id="playerNameInput">Please enter your Name:</h2>
-        <input type = 'text' id="playerName" required>
-        <input type = "submit"  value="Submit" onclick ="playerHello ()"
-        >
-    </div> -->
-    <!--  -->
+    
     <div id = "mainBox">
     <div id="questionArea" class="hide">
         <div id="question">Question</div>
@@ -36,12 +30,14 @@
     <div id="quizManage">
     <div id="startQ">
         <button id="startBtn" class="start-Btn btn">Start Quiz</button>
-        <button id="nextBtn" class="next-Btn btn hide">Next Question</button>
+        <button id="nextBtn" class="next-Btn btn hide">Next</button>
+        <button id="exitBtn" class="exit-Btn btn hide" onclick="exitQuiz">Quit</button>
     </div>
-<div id="exitQ">
-    <button id="ExitBtn" class="exit-Btn btn hide">Quit</button>
+
 </div>
 </div>
+<div id="quizScore">
+
 </div>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/questions.js"></script>

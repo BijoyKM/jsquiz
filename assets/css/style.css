@@ -7,9 +7,7 @@
 
 body {
     background: cadetblue;
-    /* background-image: url(/assets/images/javascriptimage.png);
-    background-repeat: no-repeat ;
-    /* background-position: center;  */
+    
     padding: 0;
   margin: 0;
   width: 100vw;
@@ -21,10 +19,15 @@ body {
 }
 
 #mainHeader {
+
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
     padding-bottom: 2rem;
+    font-size:larger;
 }
+
 #mainBox {
     height: auto;
     width: auto;
@@ -55,23 +58,24 @@ outline: none;
 
 .btn:hover {
     border-color:black;
-    border-width: 3px;
+    border-width: 2px;
 }
 .btn.correct {
-    background-color: hsl(88, 92%, 75%);
+    background-color: hsl(163, 90%, 23%);
 }
 
 .btn.wrong {
-    background-color: hsl(0, 82%, 74%);
+    background-color: hsl(0, 89%, 65%);
 }
 
 .start-Btn, .next-Btn, .exit-Btn {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+    display: row;
+    justify-content:space-around;
+    align-items:center;
     font-size: 1.75rem;
     font-weight: bold;
     padding: 10px 20px;
+    
 }
 
 #quizManage {
