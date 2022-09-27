@@ -58,66 +58,66 @@ const questions = [{
         }
     ]
 },
-// {
-//     question: "Which of the following methods can be used to display data in some form using Javascript?",
-//     answers: [{
-//             choice: "A. document.write()",
-//             "correct": false,
-//         },
-//         {
-//             choice: "B. console.log()",
-//             "correct": false,
-//         },
-//         {
-//             choice: "C. window.alert()",
-//             "correct": false,
-//         },
-//         {
-//             choice: "D. All of the above",
-//             "correct": true,
-//         }
-//     ]
-// },
-// {
-//     question: "How can a datatype be declared to be a constant type?",
-//     answers: [{
-//             choice: "A. const",
-//             "correct": true,
-//         },
-//         {
-//             choice: "B. var",
-//             "correct": false,
-//         },
-//         {
-//             choice: "C. let",
-//             "correct": false,
-//         },
-//         {
-//             choice: "D. constant",
-//             "correct": false,
-//         }
-//     ]
-// },
-// {
-//     question: "When the switch statement matches the expression with the given labels, how is the comparison done?",
-//     answers: [{
-//             choice: "A. Both the datatype and the result of the expression are compared.",
-//             "correct": true,
-//         },
-//         {
-//             choice: "B. Only the datatype of the expression is compared.",
-//             "correct": false,
-//         },
-//         {
-//             choice: "C. Only the value of the expression is compared.",
-//             "correct": false,
-//         },
-//         {
-//             choice: "D. None of the above",
-//             "correct": false,
-//         }
-//     ]
-// },
+{
+    question: "Which of the following methods can be used to display data in some form using Javascript?",
+    answers: [{
+            choice: "A. document.write()",
+            "correct": false,
+        },
+        {
+            choice: "B. console.log()",
+            "correct": false,
+        },
+        {
+            choice: "C. window.alert()",
+            "correct": false,
+        },
+        {
+            choice: "D. All of the above",
+            "correct": true,
+        }
+    ]
+},
+{
+    question: "How can a datatype be declared to be a constant type?",
+    answers: [{
+            choice: "A. const",
+            "correct": true,
+        },
+        {
+            choice: "B. var",
+            "correct": false,
+        },
+        {
+            choice: "C. let",
+            "correct": false,
+        },
+        {
+            choice: "D. constant",
+            "correct": false,
+        }
+    ]
+},
+{
+    question: "When the switch statement matches the expression with the given labels, how is the comparison done?",
+    answers: [{
+            choice: "A. Both the datatype and the result of the expression are compared.",
+            "correct": true,
+        },
+        {
+            choice: "B. Only the datatype of the expression is compared.",
+            "correct": false,
+        },
+        {
+            choice: "C. Only the value of the expression is compared.",
+            "correct": false,
+        },
+        {
+            choice: "D. None of the above",
+            "correct": false,
+        }
+    ]
+},
 // {
 //     question: "What keyword is used to check whether a given property is valid or not?",
 //     answers: [{

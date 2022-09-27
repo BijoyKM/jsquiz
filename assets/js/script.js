@@ -6,7 +6,8 @@ const questionAreaElem = document.querySelector('#questionArea')
 let questionsShuffle, currentQuesNum
 const quizQuesElem = document.querySelector('#question')
 const quizAnsElem = document.querySelector('#answerArea')
-let score = 0
+let currentScore = 0
+let quizScore
 
 
 
@@ -48,9 +49,12 @@ function showQuizQues (question) {
         answerButton.classList.add('btn')
         if(answer.correct) {
             answerButton.dataset.correct = answer.correct
+           
         }
         answerButton.addEventListener('click', answerSelect)
         quizAnsElem.appendChild(answerButton)
+        currentScore +=1;
+    scoreCalc();
     })
 }
 
@@ -61,6 +65,7 @@ console.log(correct)
 setQuizStatus(document.body, correct)
 Array.from(quizAnsElem.children).forEach(answerButton => {
     setQuizStatus(answerButton, answerButton.dataset.correct)
+    
 })
 if(questionsShuffle.length > currentQuesNum + 1) {
 nextButn.classList.remove('hide')
@@ -68,8 +73,6 @@ exitButn.innerText = 'Exit'
 exitButn.classList.remove("hide")
 } else {
     startButn.innerText = 'Start Again'
-    
-    console.log(score)
     startButn.classList.remove('hide')
     
     
@@ -85,10 +88,14 @@ function clearState () {
     }
 }
 
+function scoreCalc () {
+    document.getElementById("scoreCountId").innerText = ` ${currentScore}`;
+}
 function setQuizStatus(element, correct) {
     clearQuizStatus(element)
     if (correct) {
         element.classList.add('correct')
+        
     } else {
         element.classList.add('wrong')
        

@@ -26,6 +26,7 @@
         <button class="btn">Answer C</button>
         <button class="btn">Answer D</button>
     </div>
+    
 </div>
     <div id="quizManage">
     <div id="startQ">
@@ -33,11 +34,13 @@
         <button id="nextBtn" class="next-Btn btn hide">Next</button>
         <button id="exitBtn" class="exit-Btn btn hide" onclick="exitQuiz()">Quit</button>
     </div>
-
+    
 </div>
-</div>
-<div id="quizScore">
-
+</div> <br><br>
+<div id="scoreCounter"  class= "hide">Score:<span id="scoreCountId"> 0</span></div>
+<div id="quizScore" class= "hide">
+<h2>Congratulations on completing the Javascript Quiz</h2><br>
+<p>Your Scores are: <span id="totalScore"></span></p>
 </div>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/questions.js"></script>

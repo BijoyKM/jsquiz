@@ -41,7 +41,7 @@ body {
 #answerArea {
     display: grid;
     justify-content: center;
-    align-items: center;
+    align-items:center;
     display: grid;
     grid-template-columns: repeat(1, auto);
     gap: 20px;
@@ -56,6 +56,7 @@ background-color: rgb(164, 203, 204);
 outline: none;
 }
 
+
 .btn:hover {
     border-color:black;
     border-width: 2px;
@@ -68,6 +69,7 @@ outline: none;
     background-color: hsl(0, 89%, 65%);
 }
 
+
 .start-Btn, .next-Btn, .exit-Btn {
     display: row;
     justify-content:space-around;
@@ -76,6 +78,11 @@ outline: none;
     font-weight: bold;
     padding: 10px 20px;
     
+}
+
+#scoreCounter {
+    font-weight: bolder;
+    font-size: larger;
 }
 
 #quizManage {
