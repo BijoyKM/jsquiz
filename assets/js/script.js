@@ -74,8 +74,6 @@ exitButn.classList.remove("hide")
 } else {
     startButn.innerText = 'Start Again'
     startButn.classList.remove('hide')
-    
-    
 }
 }
 function clearState () {

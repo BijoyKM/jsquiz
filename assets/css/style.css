@@ -26,6 +26,7 @@ body {
     align-items: center;
     padding-bottom: 2rem;
     font-size:larger;
+    margin-top: 10%;
 }
 
 #mainBox {
@@ -48,18 +49,20 @@ body {
     padding: 10px 20px;
 }
 .btn {
-color: black;
-border: 1px solid;
+    color: aliceblue;
+
+border: 5px solid;
 border-radius: 5px;
 padding: 5px 10px;
-background-color: rgb(164, 203, 204);
+background-color: cadetblue;
 outline: none;
 }
 
 
 .btn:hover {
     border-color:black;
-    border-width: 2px;
+    cursor: pointer;
+    color: black;
 }
 .btn.correct {
     background-color: hsl(163, 90%, 23%);
@@ -94,3 +97,8 @@ align-items: center;
 .hide {
     display: none;
 }
+
+footer {
+    margin-top: auto;
+    color: aliceblue;
+  }
