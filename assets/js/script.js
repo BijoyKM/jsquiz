@@ -102,5 +102,8 @@ function clearQuizStatus(element) {
 }
 
 function exitQuiz () {
+    
+        if (confirm("Press 'Ok' to exit Javascript Quiz, or 'Cancel' to stay: ")) {
     window.location = "https://bijoykm.github.io/jsquiz/"
 }
+}   
