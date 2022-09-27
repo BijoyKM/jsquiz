@@ -100,3 +100,7 @@ function clearQuizStatus(element) {
     element.classList.remove('correct')
     element.classList.remove('wrong')
 }
+
+function exitQuiz () {
+    window.location = "https://bijoykm.github.io/jsquiz/"
+}
