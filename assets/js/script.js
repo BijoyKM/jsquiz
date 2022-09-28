@@ -46,11 +46,11 @@ function showQuizQues(question) {
         const answerButton = document.createElement('button'); // Creating buttons for the answers
         answerButton.innerText = answer.choice;
         answerButton.classList.add('btn');
-        if (answer.correct) {   // checking if the answer is correct and setting to data attribute to button 
+        if (answer.correct) { // checking if the answer is correct and setting to data attribute to button 
             answerButton.dataset.correct = answer.correct;
 
         }
-        answerButton.addEventListener('click', answerSelect); 
+        answerButton.addEventListener('click', answerSelect);
         quizAnsElem.appendChild(answerButton);
     });
 }
@@ -60,7 +60,6 @@ function answerSelect(event) {
     const answerSelected = event.target;
     const correct = answerSelected.dataset.correct;
     console.log(correct);
-    // setQuizStatus(document.body, correct)
     Array.from(quizAnsElem.children).forEach(answerButton => { //setting the status of the button to correct based on correct answer
         setQuizStatus(answerButton, answerButton.dataset.correct);
 
@@ -76,9 +75,9 @@ function answerSelect(event) {
 }
 //function which clears the old answers and question
 function clearState() {
-    
+
     nextButn.classList.add("hide"); // hides the Next Button
-    exitButn.classList.add("hide");  // hides the Exit Button
+    exitButn.classList.add("hide"); // hides the Exit Button
     while (quizAnsElem.firstChild) { // loop to check if any child element to be removed
         quizAnsElem.removeChild(quizAnsElem.firstChild);
 

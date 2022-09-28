@@ -16,7 +16,55 @@ The website can be viewed here. [Javascript Quiz](https://bijoykm.github.io/jsqu
 
 # User Experience (UX)
 ## User Stories
-* ## As a Website Owner I want that:
+* ## As a Website Owner:
+1. The website provide a simple program to play Javascript Quiz.
+2. The website provide very few and clear buttons to navigate through and out of the quiz.
+3. The multiple choice questions has definitely helped in solidifying mine and users Javascript knowledge.
+
+* ## As a Website User:
+1. To use the website to play the quiz with clear and informative buttons.
+2. Upon clicking on answers, the correct answer in shown in green color(hsl(163, 90%, 23%)) and wrong answer in light red color hsl(0, 89%, 65%).
+3. To use Next to go to the next question and to Exit button to goto the homepage.
+
+
+# 1. Strategy
+* The main purpose for creating this website is to develop a Javascript Quiz by using and implementing Javascript, HTML and CSS.
+* To provide users a interesting quiz based on Javascript to increase and revise their knowledge.
+
+# 2. Scope
+* The scope of this website is provide easy to navigate quiz based on Javascript.
+* The single page website is plain, simple and information provided is clear and concise.
+* The webpage can be accessed on all kinds of devices.
+
+# 3. Structure
+* Users will find that the single page website with four navigation buttons, which is common to most quiz websites, is simply laid out with easy organisation of information.
+* These are the Start, Next, Exit and Restart buttons.
+* Each question has four options, when clicked on the correct option the background color of that answer button turns to green color(hsl(163, 90%, 23%)). All wrong answers buttons are turned to light red color hsl(0, 89%, 65%).
+* The footer section provides information on the disclaimer notice.
+
+# 4. Skeleton
+## Wireframes
+The Wireframes were made by Balsamiq.
+* [index.html](/assets/images/readmeimages/homePage.jpg)
+* [questionPage](/assets/images/readmeimages/questionPage.jpg)
+* [exitPage](/assets/images/readmeimages/exitPage.jpg)
+* [startAgain](/assets/images/readmeimages/startAgain.jpg)
+
+
+# Technologies Used
+
+* ## Languages
+1. [Javascript](https://www.javascript.com/)
+2. [HTML5](https://en.wikipedia.org/wiki/HTML5)
+3. [CSS3](https://en.wikipedia.org/wiki/CSS)
+
+* ## Misc. Software
+* [Balsamiq](https://balsamiq.com/) : Wireframes are built in Basamiq.
+* [Gitpod](https://gitpod.io/) : Gitpod was used as an environment, and code was pushed to Github.It is used for version control as well as it allows to commit the code at different stages as and when required.
+* [Github](https://github.com/) : Github is used as repository storage for the project.
+* [MS Photos](https://www.microsoft.com/en-us/p/photo-editor-free/9wzdncrdt2g5) : MS Photos was used to resize the images.
+* [Favicon](http://favicon.io/) : Favicon generator was used to create the Favicon icon.
+
 
 
 # Testing
@@ -90,7 +138,8 @@ The website can be viewed here. [Javascript Quiz](https://bijoykm.github.io/jsqu
 *   'Love Maths' project has really helped in understanding the concepts.
 *   [Flexbox Playground](https://flexbox.tech/) helped in implementing flexboxes.
 *   [Code Institute](https://codeinstitute.net/ie/) classes and videos helped in most of the concepts especially in form building, UX etc in addition to everything else.
-*   [W3C](https://www.w3schools.com/html/) helped in quick understanding and testing of various HTML and CSS concepts.
+*   [W3C](https://www.w3schools.com/html/) helped in quick understanding and testing of various Javascript, HTML and CSS concepts.
+*   [JavaScript - MDN Web Docs - Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript) helped in quick understanding and testing of various Javascript concepts.
 *   [InterviewBit](https://www.interviewbit.com/javascript-mcq/) The multiple choice questions used in quiz are from InterviewBit.
 
 
