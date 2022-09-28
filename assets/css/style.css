@@ -107,3 +107,19 @@ footer {
     margin-top: auto;
     color: aliceblue;
 }
+
+/* Media query for devices with max width 650px and below */
+@media screen and (max-width: 650px) {
+    #quizInfo {
+        text-align: center;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
+
+/* Media query for devices with max width 420px and below */
+@media screen and (max-width: 420px) {
+    footer {
+        text-align: center;
+    }
+}
