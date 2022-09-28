@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,46 +9,45 @@
     <meta name="description" content="Javascript Quiz">
     <meta name="keywords" content="Javascript, quiz, test, multiple choice questions">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/images/favicon.png">
 </head>
-<body >
+
+<body>
     <!-- Main Heading -->
     <div id="mainHeader">
         <h1>Javascript Quiz</h1>
         <p id="quizInfo">The Following 20 questions will test your knowledge in Javascript.</p>
-        
-    </div>
-    
-    <div id = "mainBox">
-    <div id="questionArea" class="hide">
-        <div id="question">Question</div>
-    <div id="answerArea">
-        <button class="btn">Answer A</button>
-        <button class="btn">Answer B</button>
-        <button class="btn">Answer C</button>
-        <button class="btn">Answer D</button>
-    </div>
-    
-</div>
-    <div id="quizManage">
-    <div id="startQ">
-        <button id="startBtn" class="start-Btn btn">Start Quiz</button>
-        <button id="nextBtn" class="next-Btn btn hide">Next</button>
-        <button id="exitBtn" class="exit-Btn btn hide" onclick="exitQuiz()">Quit</button>
-    </div>
-    
-</div>
-</div> <br><br>
-<div id="scoreCounter"  class= "hide">Score:<span id="scoreCountId"> 0</span></div>
-<div id="quizScore" class= "hide">
-<h2>Congratulations on completing the Javascript Quiz</h2><br>
-<p>Your Scorecard: <span id="totalScore"></span></p>
-</div>
 
-<footer>
-    <small>&copy; The website is for educational purposes only. Bijoy K Mathew</small>
-  </footer>
+    </div>
+    <!-- Main quiz box with questions and answers -->
+    <div id="mainBox">
+        <div id="questionArea" class="hide">
+            <div id="question">Question</div>
+            <div id="answerArea">
+                <button class="btn">Answer A</button>
+                <button class="btn">Answer B</button>
+                <button class="btn">Answer C</button>
+                <button class="btn">Answer D</button>
+            </div>
+            <!-- Div containing the Start, Next and Exit button -->
+        </div>
+        <div id="quizManage">
+            <div id="startQ">
+                <button id="startBtn" class="start-Btn btn">Start Quiz</button>
+                <button id="nextBtn" class="next-Btn btn hide">Next</button>
+                <button id="exitBtn" class="exit-Btn btn hide" onclick="exitQuiz()">Quit</button>
+            </div>
+
+        </div>
+    </div> <br><br><br>
+
+    <!-- footer message -->
+    <footer>
+        <small>&copy; The website is for educational purposes only. Bijoy K Mathew</small>
+    </footer>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/questions.js"></script>
-    
+
 </body>
+
 </html>
