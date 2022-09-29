@@ -8,7 +8,7 @@ The website can be viewed here. [Javascript Quiz](https://bijoykm.github.io/jsqu
 # Index – Table of Contents
 - [User Experience (UX)](#user-experience-ux)
 - [Features](#features)
-- [Technologies Used](#tecnologies-used)
+- [Technologies Used](#technologies-used)
 - [Testing](#testing)
 - [Deployment](#deployment)
 - [Credits](#credits)
@@ -49,6 +49,47 @@ The Wireframes were made by Balsamiq.
 * [questionPage](/assets/images/readmeimages/questionPage.jpg)
 * [exitPage](/assets/images/readmeimages/exitPage.jpg)
 * [startAgain](/assets/images/readmeimages/startAgain.jpg)
+
+# 5. Surface
+* ## Color
+![Color Scheme Image](/assets/images/readmeimages/jsQuizColorSchemejpg.jpg "Color Scheme Image")
+The main page and background is in Cadetblue color. This includes for the Start, Next and Exit Buttons. Aliceblue is used as the background for the question box. The answer button before selection is in Cadetblue. Correct answer is in hsl(163, 90%, 23%) darker green color. Wrongs answers are in hsl(0, 89%, 65%) lighter red color. Black and white is used for texts.
+
+* ## Font
+Verdana, Geneva, Tahoma, sans-serif font-family were used for this website.
+
+
+# Features
+## Existing Features
+### Main Page
+![Main Page Image](/assets/images/readmeimages/mainpage.jpg "Main Page Image")
+
+* This page is the main landing page throughout quiz which provides the basic layout with header, Start Button and quiz information.
+
+### Question Page
+![Question Page Image](/assets/images/readmeimages/Questionsscreen.jpg "Questions Page Image")
+
+* Provides questions and answer set. 
+
+### Answer Selection Page
+![Answer Selection Page Image](/assets/images/readmeimages/answerSelectionPage.jpg "Answer Selection Page Image")
+
+* Once answer is selected will provide the correct answer in Green color and wrong answers in Red color. The Next and Exit button also appears after the answer selection.
+
+### Exit Selection Page
+![Exit Selection Page Image](/assets/images/readmeimages/exitSelectionPage.jpg "Exit Selection Page Image")
+
+* When Exit button is clicked it will prompt for confirmation. If Ok is pressed it will bring back to the Main Page.
+
+### Start Again Page
+![Start Again Page Image](/assets/images/readmeimages/startAgainPage.jpg "Start Again Page Image")
+
+* When Start Again is clicked it will restart the quiz and bring back to Question Page.
+
+### Footer Section
+![Footer Section Image](/assets/images/readmeimages/footerSection.jpg "Footer Section Image")
+
+* Footer section is providing the Disclaimer Notice.
 
 
 # Technologies Used
