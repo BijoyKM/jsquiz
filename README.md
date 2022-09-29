@@ -74,7 +74,7 @@ Verdana, Geneva, Tahoma, sans-serif font-family were used for this website.
 ### Answer Selection Page
 ![Answer Selection Page Image](/assets/images/readmeimages/answerSelectionPage.jpg "Answer Selection Page Image")
 
-* Once answer is selected will provide the correct answer in Green color and wrong answers in Red color. The Next and Exit button also appears after the answer selection.
+* Once answer is selected the page will provide the correct answer in Green color and wrong answers in Red color. The Next and Exit button also appears after the answer selection.
 
 ### Exit Selection Page
 ![Exit Selection Page Image](/assets/images/readmeimages/exitSelectionPage.jpg "Exit Selection Page Image")
@@ -90,6 +90,14 @@ Verdana, Geneva, Tahoma, sans-serif font-family were used for this website.
 ![Footer Section Image](/assets/images/readmeimages/footerSection.jpg "Footer Section Image")
 
 * Footer section is providing the Disclaimer Notice.
+
+## Bugs
+* There are no known bugs in the project.
+
+*   ## Future Implementation
+* Unfortunately to time contraints the Score card option is not implemented. I would like to add it in the future implementation.
+* I would also love to add Help button to each question, when a wrong answer is selected. This will help the user to understand the concepts more.
+
 
 
 # Technologies Used
@@ -150,6 +158,15 @@ The website was tested on the following browsers:
 * Google Chrome : Version 105.0.5195.127 (Official Build) (64-bit)
 * Mozilla Firefox : Version 105.0.1 (64-bit)
 * Microsoft Edge : Version 105.0.1343.53 (Official build) (64-bit)
+
+## Manual Testing
+* Main landing page throughout quiz which provides the basic layout with header, Start Button and quiz information, is responsive to smaller screens.
+* Start Button when pressed, brings to the questions screen with four answer buttons. 
+* Once answer is selected the page will provide the correct answer in Green color and wrong answers in Red color.
+* Next Button will bring to the next available question set.
+* Exit Button will confirm the action and exit the quiz.
+* On the last question page, Next and Exit buttons will be replaced by the Restart button. This will bring back to the Question Page.
+
 
 
 
