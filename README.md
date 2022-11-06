@@ -53,7 +53,7 @@ The Wireframes were made by Balsamiq.
 # 5. Surface
 * ## Color
 ![Color Scheme Image](/assets/images/readmeimages/jsQuizColorSchemejpg.jpg "Color Scheme Image")
-The main page and background is in Cadetblue color. This includes for the Start, Next and Exit Buttons. Aliceblue is used as the background for the question box. The answer button before selection is in Cadetblue. Correct answer is in hsl(163, 90%, 23%) darker green color. Wrongs answers are in hsl(0, 89%, 65%) lighter red color. Black and white is used for texts.
+The main page and background is in Cadetblue color. This includes for the Start, Next and Exit Buttons. Aliceblue is used as the background for the question box. The answer button before selection is in Cadetblue. Correct answer is in Cadetblue color. Wrongs answers are in hsl(0, 89%, 65%) lighter red color. Black and white is used for texts.
 
 * ## Font
 Verdana, Geneva, Tahoma, sans-serif font-family were used for this website.
