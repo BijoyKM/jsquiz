@@ -71,7 +71,7 @@ body {
 
 /* for when button for correct answer is chosen */
 .btn.correct {
-    background-color: hsl(163, 90%, 23%);
+    background-color: cadetblue;
 }
 
 /* for when the button for wrong answer is chosen */
