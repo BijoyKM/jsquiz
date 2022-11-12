@@ -29,10 +29,19 @@ body {
     margin-top: 10%;
 }
 
+/* Number of question line css style */
+#quizInfo {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 2rem;
+    font-size: larger;
+    margin-top: 10%;
+}
 /* main box css styles for the question area */
 #mainBox {
-    height: auto;
-    width: auto;
+    height: 70%;
+    width: 70%;
     max-width: 80%;
     background-color: aliceblue;
     border-radius: 5%;
@@ -40,15 +49,25 @@ body {
     box-shadow: 0 0 15px 5px;
 
 }
+
+/* css styles for the question area */
+#question {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 /* css styles for the answer area */
 #answerArea {
     display: grid;
-    justify-content: center;
-    align-items: center;
-    display: grid;
+    /* justify-content: center; */
+    /* align-items:center; */
     grid-template-columns: repeat(1, auto);
+    /* margin: 1.25rem; */
     gap: 20px;
     padding: 10px 20px;
+    max-width: 500px;
+    margin: auto;
 
 }
 /* for all the buttons used */
@@ -77,6 +96,21 @@ body {
 /* for when the button for wrong answer is chosen */
 .btn.wrong {
     background-color: hsl(0, 89%, 65%);
+}
+
+/* for score section */
+#scoreSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+#scoreInfo {
+    margin: 7px;
 }
 
 /* for Start, Next and Exit buttons */
