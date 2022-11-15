@@ -5,20 +5,23 @@
 const qInfo = document.querySelector('#quizInfo');
 const startButn = document.querySelector('#startBtn');
 const scoreSec = document.querySelector('#scoreSection');
+const scoreInfo = document.querySelector('#score');
 const nextButn = document.querySelector('#nextBtn');
 const exitButn = document.querySelector('#exitBtn');
 const questionAreaElem = document.querySelector('#questionArea');
 let questionsShuffle, currentQuesNum;
 const quizQuesElem = document.querySelector('#question');
 const quizAnsElem = document.querySelector('#answerArea');
+let questionNum = document.getElementById("question-num");
 let choiceOne = document.querySelector('#answerA')
 let choiceTwo = document.querySelector('#answerB')
 let choiceThree = document.querySelector('#answerC')
 let choiceFour = document.querySelector('#answerD')
-// constchoiceOneButton = document.createElement('button');
-// const choiceTwoButton = document.createElement('button');
-// const choiceThreeButton = document.createElement('button');
-// const choiceFourButton = document.createElement('button');
+const choiceOneButton = document.createElement('button');
+const choiceTwoButton = document.createElement('button');
+const choiceThreeButton = document.createElement('button');
+const choiceFourButton = document.createElement('button');
+let correctAnswerIndex = 0;
 
 // event listeners for the Start and the Next Buttons
 
@@ -50,14 +53,15 @@ function getNextQuestion() {
 
 // //Function to show the questions from the questions array
 function showQuizQues(question) {
+    questionNum.innerText = `Question ${currentQuesNum} of 20:`
     quizQuesElem.innerText = question.question; //displays the question text
-    choiceOne.innerText = question.choice1;
+    choiceOne.innerText = question.choice1;  //displays the answer text
     choiceTwo.innerText = question.choice2;
     choiceThree.innerText = question.choice3;
     choiceFour.innerText = question.choice4;
-    
+    choiceOne.addEventListener('click', )
     // question.answers.forEach(answer => { //Looping through the question.answers
-    //     const answerButton = document.createElement('button'); // Creating buttons for the answers
+    //    const answerButton = document.createElement('button'); // Creating buttons for the answers
 //         answerButton.innerText = answer.choice;
 //         answerButton.classList.add('btn');
 //         if (answer.correct) { // checking if the answer is correct and setting to data attribute to button 
@@ -70,7 +74,10 @@ function showQuizQues(question) {
   }
 // //Function selects the answer with user's click event
 
-// function answerSelect(event) {
+function answerSelect() {
+    if(this.innerHTML === questions[0].correct) {
+        this.classList.add('btn.correct');
+    }
 //     const answerSelected = event.target;
 //     const correct = answerSelected.dataset.correct;
 //     console.log(correct);
@@ -87,6 +94,14 @@ function showQuizQues(question) {
 //         startButn.classList.remove('hide');
 //     }
 // }
+
+//function for Incrementing the score
+function incrementScore {
+    correctAnswerInder++;
+    score = (correctAnswerIndex * 1);
+    scoreInfo.innerText = score;
+    return;
+}
 // //function which clears the old answers and question
 // function clearState() {
 

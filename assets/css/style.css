@@ -40,8 +40,8 @@ body {
 }
 /* main box css styles for the question area */
 #mainBox {
-    height: 70%;
-    width: 70%;
+    height: 60%;
+    width: 60%;
     max-width: 80%;
     background-color: aliceblue;
     border-radius: 5%;
@@ -51,10 +51,15 @@ body {
 }
 
 /* css styles for the question area */
+#question-num {
+    margin: 2%;
+}
+
 #question {
     padding: 10px 20px;
     font-size: 1.5rem;
     font-weight: bold;
+    margin: auto;
 }
 
 /* css styles for the answer area */
@@ -68,7 +73,7 @@ body {
     padding: 10px 20px;
     max-width: 500px;
     margin: auto;
-
+    
 }
 /* for all the buttons used */
 .btn {
@@ -79,6 +84,7 @@ body {
     padding: 5px 10px;
     background-color: cadetblue;
     outline: none;
+    font-size: 1rem;
 }
 
 /* for button hover */
@@ -114,7 +120,13 @@ body {
 }
 
 /* for Start, Next and Exit buttons */
-.start-Btn,
+.start-Btn {
+    margin-top: 30%;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.75rem;
+    font-weight: bold;
+}
 .next-Btn,
 .exit-Btn {
     justify-content: space-around;
