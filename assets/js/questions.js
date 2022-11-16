@@ -73,11 +73,9 @@ const questions = [{
     correct: "B. Their references are compared.",
 },
 {
-    question: `What will be the output of the following code snippet?\n
-          <script type='text/javascript'>\n 
-                 a = 5 + "9";\n
-                 document.write(a);\n
-                  </script>`,
+    question: `What will be the output of the following code snippet?
+                 a = 5 + "9";
+                 document.write(a);`,
     choice1: "A. Compiltaion Error",
     choice2: "B. 14",
     choice3: "C. Runtime Error",
@@ -85,10 +83,9 @@ const questions = [{
     correct: "D. 59",
 },
 {
-    question: `What will be the output of the following code snippet?\nvar a = Math.max();\n
-var b = Math.min();\n
-print(a);\n
-print(b);\n`,
+    question: `What will be the output of the following code snippet?\nvar a = Math.max();
+var b = Math.min();
+print(a); print(b);`,
     choice1: "A. -Infinity Infinity",
     choice2: "B. Infinity -Infinity",
     choice3: "C. Infinity Infinity",
@@ -96,7 +93,7 @@ print(b);\n`,
     correct: "A. -Infinity Infinity",
 },
 {
-    question: `What will be the output of the following code snippet?\n"var a = true + true + true * 3;\n
+    question: `What will be the output of the following code snippet?\n"var a = true + true + true * 3;
 print(a)`,
     choice1: "A. 3",
     choice2: "B. 0",
@@ -113,7 +110,7 @@ print(a)`,
     correct: "B. Number",
 },
 {
-    question: `What will be the output of the following code snippet?\na = [1, 2, 3, 4, 5];\n
+    question: `What will be the output of the following code snippet?\na = [1, 2, 3, 4, 5];
 print(a.slice(2, 4));`,
     choice1: "A. 3, 4",
     choice2: "B. 2, 3",
@@ -122,8 +119,8 @@ print(a.slice(2, 4));`,
     correct: "D. 2, 3, 4",
 },
 {
-    question: `What will be the output of the following code snippet?\nconst obj1 = {Name: "Hello", Age: 16};\n
-const obj2 = {Name: "Hello", Age: 16};\n
+    question: `What will be the output of the following code snippet?\nconst obj1 = {Name: "Hello", Age: 16};
+const obj2 = {Name: "Hello", Age: 16};
 print(obj1 === obj2);`,
     choice1: "A. true",
     choice2: "B. false",
@@ -132,9 +129,8 @@ print(obj1 === obj2);`,
     correct: "B. false",
 },
 {
-    question: `What will be the output of the following code snippet?\n function dog() {\n
-print("I am a dog.");\n
-}\n
+    question: `What will be the output of the following code snippet?\n function dog() {
+print("I am a dog.");}
 dog.sound = "Bark";`,
     choice1: "A. Syntax Error",
     choice2: "B. 'Iam a dog' gets printed",
@@ -144,9 +140,7 @@ dog.sound = "Bark";`,
 },
 {
     question: `What will be the output of the following code snippet?\nfunction test(...args) {\n
-console.log(typeof args);\n
-}\n
-test(12);`,
+console.log(typeof args);} test(12);`,
     choice1: "A. NaN",
     choice2: "B. Number",
     choice3: "C. Object",
@@ -154,7 +148,7 @@ test(12);`,
     correct: "C. Object",
  },
 {
-    question: `What will be the output of the following code snippet?\nconst obj1 = {first: 20, second: 30, first: 50};\n
+    question: `What will be the output of the following code snippet?\nconst obj1 = {first: 20, second: 30, first: 50};
 console.log(obj1);`,
     choice1: "A. {first:20, second:30}",
     choice2: "B. {first:50, second:30}",

@@ -12,6 +12,7 @@ const questionAreaElem = document.querySelector('#questionArea');
 let questionsShuffle, currentQuesNum;
 const quizQuesElem = document.querySelector('#question');
 const quizAnsElem = document.querySelector('#answerArea');
+let answerButton = document.querySelector('#btn-answer');
 let questionNum = document.getElementById("question-num");
 let choiceOne = document.querySelector('#answerA')
 let choiceTwo = document.querySelector('#answerB')
@@ -38,7 +39,7 @@ function startQuiz() {
     scoreSec.classList.remove("hide");
     startButn.classList.add("hide"); // Hides Start Button
     questionsShuffle = questions.sort(() => (Math.random() - 0.5)); //Shuffling of the questions into an array
-    currentQuesNum = [0];
+    currentQuesNum = [1];
     questionAreaElem.classList.remove("hide");
 
     getNextQuestion();
@@ -59,7 +60,10 @@ function showQuizQues(question) {
     choiceTwo.innerText = question.choice2;
     choiceThree.innerText = question.choice3;
     choiceFour.innerText = question.choice4;
-    choiceOne.addEventListener('click', )
+    choiceOne.addEventListener('click', answerSelect());
+    choiceTwo.addEventListener('click', answerSelect());
+    choiceThree.addEventListener('click', answerSelect());
+    choiceFour.addEventListener('click', answerSelect());
     // question.answers.forEach(answer => { //Looping through the question.answers
     //    const answerButton = document.createElement('button'); // Creating buttons for the answers
 //         answerButton.innerText = answer.choice;
@@ -77,7 +81,18 @@ function showQuizQues(question) {
 function answerSelect() {
     if(this.innerHTML === questions[0].correct) {
         this.classList.add('btn.correct');
+        incrementScore(score);
     }
+    // else {
+    //     this.classList.add('btn.wrong');
+    //     for (let i = 0; i < answerButton.length; i++) {
+    //         if (answerButton[i].innerHTML === questions[0].correct) {
+    //             answerButton[i].classList.add('btn.correct'); 
+    //         }
+    //     } 
+    // } 
+    nextButn.classList.remove('hide');
+    
 //     const answerSelected = event.target;
 //     const correct = answerSelected.dataset.correct;
 //     console.log(correct);
@@ -93,11 +108,11 @@ function answerSelect() {
 //         startButn.innerText = 'Start Again';
 //         startButn.classList.remove('hide');
 //     }
-// }
+}
 
 //function for Incrementing the score
-function incrementScore {
-    correctAnswerInder++;
+function incrementScore() {
+    correctAnswerIndex++;
     score = (correctAnswerIndex * 1);
     scoreInfo.innerText = score;
     return;
