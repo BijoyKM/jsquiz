@@ -5,24 +5,16 @@
 const qInfo = document.querySelector('#quizInfo');
 const startButn = document.querySelector('#startBtn');
 const scoreSec = document.querySelector('#scoreSection');
-const scoreInfo = document.querySelector('#score');
+let currScore = 0;
+const questIndex = document.querySelector('#question-number');
+let currQuesIndex = 0;
 const nextButn = document.querySelector('#nextBtn');
 const exitButn = document.querySelector('#exitBtn');
 const questionAreaElem = document.querySelector('#questionArea');
 let questionsShuffle, currentQuesNum;
 const quizQuesElem = document.querySelector('#question');
 const quizAnsElem = document.querySelector('#answerArea');
-let answerButton = document.querySelector('#btn-answer');
-let questionNum = document.getElementById("question-num");
-let choiceOne = document.querySelector('#answerA')
-let choiceTwo = document.querySelector('#answerB')
-let choiceThree = document.querySelector('#answerC')
-let choiceFour = document.querySelector('#answerD')
-const choiceOneButton = document.createElement('button');
-const choiceTwoButton = document.createElement('button');
-const choiceThreeButton = document.createElement('button');
-const choiceFourButton = document.createElement('button');
-let correctAnswerIndex = 0;
+
 
 // event listeners for the Start and the Next Buttons
 
@@ -36,121 +28,106 @@ nextButn.addEventListener('click', () => {
 function startQuiz() {
     console.log("Quiz is started");
     qInfo.classList.add("hide"); // Hides the paragrapgh mentioning the number of questions
-    scoreSec.classList.remove("hide");
+    scoreSec.classList.add("hide");
     startButn.classList.add("hide"); // Hides Start Button
-    questionsShuffle = questions.sort(() => (Math.random() - 0.5)); //Shuffling of the questions into an array
-    currentQuesNum = [1];
-    questionAreaElem.classList.remove("hide");
 
+    questionsShuffle = questions.sort(() => (Math.random() - 0.5)); //Shuffling of the questions into an array
+    currentQuesNum = 0;
+    questionAreaElem.classList.remove("hide");
     getNextQuestion();
 }
 
-// //function to get to the next question when the Next button is clicked
+//function to get to the next question when the Next button is clicked
 function getNextQuestion() {
-    // clearState();
+    clearState();
     showQuizQues(questionsShuffle[currentQuesNum]);
+   
 }
 
 
-// //Function to show the questions from the questions array
+//Function to show the questions from the questions array
 function showQuizQues(question) {
-    questionNum.innerText = `Question ${currentQuesNum} of 20:`
+     currQuesIndex = currQuesIndex + 1;
+    questIndex.innerText = currQuesIndex;
+
     quizQuesElem.innerText = question.question; //displays the question text
-    choiceOne.innerText = question.choice1;  //displays the answer text
-    choiceTwo.innerText = question.choice2;
-    choiceThree.innerText = question.choice3;
-    choiceFour.innerText = question.choice4;
-    choiceOne.addEventListener('click', answerSelect());
-    choiceTwo.addEventListener('click', answerSelect());
-    choiceThree.addEventListener('click', answerSelect());
-    choiceFour.addEventListener('click', answerSelect());
-    // question.answers.forEach(answer => { //Looping through the question.answers
-    //    const answerButton = document.createElement('button'); // Creating buttons for the answers
-//         answerButton.innerText = answer.choice;
-//         answerButton.classList.add('btn');
-//         if (answer.correct) { // checking if the answer is correct and setting to data attribute to button 
-//             answerButton.dataset.correct = answer.correct;
+    question.answers.forEach(answer => { //Looping through the question.answers
+        const answerButton = document.createElement('button'); // Creating buttons for the answers
+        answerButton.innerText = answer.choice;
+        answerButton.classList.add('btn');
+        if (answer.correct) { // checking if the answer is correct and setting to data attribute to button 
+            answerButton.dataset.correct = answer.correct;
+            
+        }
+        console.log(currScore);
+        answerButton.addEventListener('click', answerSelect);
+        quizAnsElem.appendChild(answerButton);
+    });
+}
+//Function selects the answer with user's click event
 
-//         }
-//         answerButton.addEventListener('click', answerSelect);
-//         quizAnsElem.appendChild(answerButton);
-//     });
-  }
-// //Function selects the answer with user's click event
+function answerSelect(event) {
+    const answerSelected = event.target;
+    const correct = answerSelected.dataset.correct;
+    console.log(correct);
+    Array.from(quizAnsElem.children).forEach(answerButton => { //setting the status of the button to correct based on correct answer
+        setQuizStatus(answerButton, answerButton.dataset.correct);
+        
 
-function answerSelect() {
-    if(this.innerHTML === questions[0].correct) {
-        this.classList.add('btn.correct');
-        incrementScore(score);
+    });
+    if (questionsShuffle.length > currentQuesNum + 1) {
+        scoreSec.classList.remove("hide");
+        nextButn.classList.remove('hide');
+        exitButn.innerText = 'Exit';
+        exitButn.classList.remove("hide");
+    } else {
+        startButn.innerText = 'Start Again';
+        startButn.classList.remove('hide');
     }
-    // else {
-    //     this.classList.add('btn.wrong');
-    //     for (let i = 0; i < answerButton.length; i++) {
-    //         if (answerButton[i].innerHTML === questions[0].correct) {
-    //             answerButton[i].classList.add('btn.correct'); 
-    //         }
-    //     } 
-    // } 
-    nextButn.classList.remove('hide');
-    
-//     const answerSelected = event.target;
-//     const correct = answerSelected.dataset.correct;
-//     console.log(correct);
-//     Array.from(quizAnsElem.children).forEach(answerButton => { //setting the status of the button to correct based on correct answer
-//         setQuizStatus(answerButton, answerButton.dataset.correct);
+}
+//function which clears the old answers and question
+function clearState() {
 
-//     });
-//     if (questionsShuffle.length > currentQuesNum + 1) {
-//         nextButn.classList.remove('hide');
-//         exitButn.innerText = 'Exit';
-//         exitButn.classList.remove("hide");
-//     } else {
-//         startButn.innerText = 'Start Again';
-//         startButn.classList.remove('hide');
-//     }
+    nextButn.classList.add("hide"); // hides the Next Button
+    exitButn.classList.add("hide"); // hides the Exit Button
+    while (quizAnsElem.firstChild) { // loop to check if any child element to be removed
+        quizAnsElem.removeChild(quizAnsElem.firstChild);
+
+    }
 }
 
-//function for Incrementing the score
-function incrementScore() {
-    correctAnswerIndex++;
-    score = (correctAnswerIndex * 1);
-    scoreInfo.innerText = score;
-    return;
+// Function to increment score
+// function incrementScore () {
+//     if (answer.correct) {
+//     currScore+= 1;
+//     score.innerText = currScore;
+//     }
+//     return currScore;
+// }
+
+// Function which sets the status of the button to correct based on correct answer
+function setQuizStatus(element, correct) {
+    clearQuizStatus(element); // clears old status from the element
+    if (correct) {
+        element.classList.add('correct');
+
+    } else {
+        element.classList.add('wrong');
+
+    }
 }
-// //function which clears the old answers and question
-// function clearState() {
 
-//     nextButn.classList.add("hide"); // hides the Next Button
-//     exitButn.classList.add("hide"); // hides the Exit Button
-//     while (quizAnsElem.firstChild) { // loop to check if any child element to be removed
-//         quizAnsElem.removeChild(quizAnsElem.firstChild);
+//Function clears the status of the button
+function clearQuizStatus(element) {
 
-//     }
-// }
+    element.classList.remove('correct');
+    element.classList.remove('wrong');
+}
 
-// // Function which sets the status of the button to correct based on correct answer
-// function setQuizStatus(element, correct) {
-//     clearQuizStatus(element); // clears old status from the element
-//     if (correct) {
-//         element.classList.add('correct');
+//Function to provide the Exit Button message
+function exitQuiz() {
 
-//     } else {
-//         element.classList.add('wrong');
-
-//     }
-// }
-
-// //Function clears the status of the button
-// function clearQuizStatus(element) {
-
-//     element.classList.remove('correct');
-//     element.classList.remove('wrong');
-// }
-
-// //Function to provide the Exit Button message
-// function exitQuiz() {
-
-//     if (confirm("Press 'Ok' to exit Javascript Quiz, or 'Cancel' to stay: ")) {
-//         window.location = "https://bijoykm.github.io/jsquiz/";
-//     }
-// }
+    if (confirm("Press 'Ok' to exit Javascript Quiz, or 'Cancel' to stay: ")) {
+        window.location = "https://bijoykm.github.io/jsquiz/";
+    }
+}
