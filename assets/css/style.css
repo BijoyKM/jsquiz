@@ -176,3 +176,14 @@ footer {
         text-align: center;
     }
 }
+
+/* Media query for devices with max width 400px and below */
+.next-Btn,
+.exit-Btn {
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+
+}
