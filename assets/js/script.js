@@ -14,7 +14,7 @@ const questionAreaElem = document.querySelector('#questionArea');
 let questionsShuffle, currentQuesNum;
 const quizQuesElem = document.querySelector('#question');
 const quizAnsElem = document.querySelector('#answerArea');
-
+const exitButton = document.querySelector('#exitBtn');
 
 // event listeners for the Start and the Next Buttons
 
@@ -24,19 +24,23 @@ nextButn.addEventListener('click', () => {
     getNextQuestion();
     
 });
+
+// event listeners for the Exit Button
+
+exitButton.addEventListener('click', exitQuiz);
+
+
 // function to start the quiz
 
 function startQuiz() {
 
-    score.innerText = 0;
-    currScore = 0;
-    score.innerText=currScore;
-    // questIndex.innerText = 1;
+    score.innerText = 0;   //resetting the score innertext when quiz starts
+    currScore = 0;     //resetting the score value when quiz starts
+    score.innerText=currScore;   //setting the score innertext value to zero quiz starts
     console.log("Quiz is started");
     qInfo.classList.add("hide"); // Hides the paragrapgh mentioning the number of questions
     scoreSec.classList.add("hide");
     startButn.classList.add("hide"); // Hides Start Button
-
     questionsShuffle = questions.sort(() => (Math.random() - 0.5)); //Shuffling of the questions into an array
     currentQuesNum = 0;
     questionAreaElem.classList.remove("hide");
@@ -53,20 +57,16 @@ function getNextQuestion() {
 
 //Function to show the questions from the questions array
 function showQuizQues(question) {
-     currQuesIndex = currQuesIndex + 1;
-    questIndex.innerText = currQuesIndex;
-
+     currQuesIndex = currQuesIndex + 1;  
+    questIndex.innerText = currQuesIndex;   // displays the question number
     quizQuesElem.innerText = question.question; //displays the question text
     question.answers.forEach(answer => { //Looping through the question.answers
         const answerButton = document.createElement('button'); // Creating buttons for the answers
         answerButton.innerText = answer.choice;
         answerButton.classList.add('btn');
         if (answer.correct) { // checking if the answer is correct and setting to data attribute to button 
-           
-            answerButton.dataset.correct = answer.correct;
-            
+           answerButton.dataset.correct = answer.correct;
         }
-        console.log(currScore);
         answerButton.addEventListener('click', answerSelect);
         quizAnsElem.appendChild(answerButton);
     });
@@ -75,24 +75,10 @@ function showQuizQues(question) {
 
 function answerSelect(event) {
     const answerSelected = event.target;
-    // answerButton.addEventListener('click', eventMethod, { once: true } );
     const correct = answerSelected.dataset.correct;
-    
-    console.log(correct);
     if(correct) {
-        currScore+= 1;
-        score.innerText=currScore;
-        // answerSection = document.getElementById('answerArea');
-        // choiceAnswer = document.getElementById('choice');
-        // answerSection.addEventListener('keyup', () => { 
-        //     choiceAnswer.disabled = !answerSelected.dataset.correct;
-        // });
-        // window.addEventListener("load", () => {
-        //     document.getElementById("answerArea").addEventListener("click", disableClick);
-        //   });
-          
-        // element.removeEventListener("mousedown", handleMouseDown, false);
-        // choice.removeEventListener("click",true);
+        currScore+= 1;     
+        score.innerText=currScore;    // // displays the current score at any time of the quiz
         }
     Array.from(quizAnsElem.children).forEach(answerButton => { //setting the status of the button to correct based on correct answer
         setQuizStatus(answerButton, answerButton.dataset.correct);
@@ -103,26 +89,13 @@ function answerSelect(event) {
         nextButn.classList.remove('hide');
         exitButn.innerText = 'Exit';
         exitButn.classList.remove("hide");
-        finalScore = 
+        
     } else {
         startButn.innerText = 'Start Again';
         startButn.classList.remove('hide');
         currQuesIndex = 0;
-        
-        // questIndex.innerText = 1;     
-        // clearState();
     }
 }
-
-// Function to disable mouse click 
-
-// function disableClick(){
-//     let answerSection = document.getElementById("answerArea");
-//     answerSection.removeEventListener("click", disableClick);
-    // currScore+= 1;
-    // score.innerText=currScore;
-    
-// }
 
 //function which clears the old answers and question
 function clearState() {
@@ -135,14 +108,6 @@ function clearState() {
     }
 }
 
-// Function to increment score
-// function incrementScore () {
-//     if (answer.correct) {
-//     currScore+= 1;
-//     score.innerText = currScore;
-//     }
-//     return currScore;
-// }
 
 // Function which sets the status of the button to correct based on correct answer
 function setQuizStatus(element, correct) {
@@ -166,6 +131,7 @@ function clearQuizStatus(element) {
 
 //Function to provide the Exit Button message
 function exitQuiz() {
+
 
     if (confirm("Press 'Ok' to exit Javascript Quiz, or 'Cancel' to stay: ")) {
         window.location = "https://bijoykm.github.io/jsquiz/";

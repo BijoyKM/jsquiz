@@ -17,6 +17,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 /* main header css styles */
 #mainHeader {
 
@@ -38,6 +39,7 @@ body {
     font-size: larger;
     margin-top: 10%;
 }
+
 /* main box css styles for the question area */
 #mainBox {
     height: auto;
@@ -73,10 +75,12 @@ body {
     padding: 10px 20px;
     max-width: 500px;
     margin: auto;
-    
+
 }
+
 /* for all the buttons used */
-.btn, .btn-answer {
+.btn,
+.btn-answer {
     color: aliceblue;
 
     border: 5px solid;
@@ -129,6 +133,7 @@ body {
     font-size: 2.75rem;
     font-weight: bold;
 }
+
 .next-Btn,
 .exit-Btn {
     justify-content: space-around;
