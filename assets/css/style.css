@@ -97,11 +97,13 @@ body {
 /* for when button for correct answer is chosen */
 .btn.correct {
     background-color: cadetblue;
+    pointer-events: none;
 }
 
 /* for when the button for wrong answer is chosen */
 .btn.wrong {
     background-color: hsl(0, 89%, 65%);
+    pointer-events: none;
 }
 
 /* for score section */

@@ -22,10 +22,16 @@ startButn.addEventListener('click', startQuiz);
 nextButn.addEventListener('click', () => {
     currentQuesNum++;
     getNextQuestion();
+    
 });
 // function to start the quiz
 
 function startQuiz() {
+
+    score.innerText = 0;
+    currScore = 0;
+    score.innerText=currScore;
+    // questIndex.innerText = 1;
     console.log("Quiz is started");
     qInfo.classList.add("hide"); // Hides the paragrapgh mentioning the number of questions
     scoreSec.classList.add("hide");
@@ -56,6 +62,7 @@ function showQuizQues(question) {
         answerButton.innerText = answer.choice;
         answerButton.classList.add('btn');
         if (answer.correct) { // checking if the answer is correct and setting to data attribute to button 
+           
             answerButton.dataset.correct = answer.correct;
             
         }
@@ -68,11 +75,27 @@ function showQuizQues(question) {
 
 function answerSelect(event) {
     const answerSelected = event.target;
+    // answerButton.addEventListener('click', eventMethod, { once: true } );
     const correct = answerSelected.dataset.correct;
+    
     console.log(correct);
+    if(correct) {
+        currScore+= 1;
+        score.innerText=currScore;
+        // answerSection = document.getElementById('answerArea');
+        // choiceAnswer = document.getElementById('choice');
+        // answerSection.addEventListener('keyup', () => { 
+        //     choiceAnswer.disabled = !answerSelected.dataset.correct;
+        // });
+        // window.addEventListener("load", () => {
+        //     document.getElementById("answerArea").addEventListener("click", disableClick);
+        //   });
+          
+        // element.removeEventListener("mousedown", handleMouseDown, false);
+        // choice.removeEventListener("click",true);
+        }
     Array.from(quizAnsElem.children).forEach(answerButton => { //setting the status of the button to correct based on correct answer
         setQuizStatus(answerButton, answerButton.dataset.correct);
-        
 
     });
     if (questionsShuffle.length > currentQuesNum + 1) {
@@ -80,11 +103,27 @@ function answerSelect(event) {
         nextButn.classList.remove('hide');
         exitButn.innerText = 'Exit';
         exitButn.classList.remove("hide");
+        finalScore = 
     } else {
         startButn.innerText = 'Start Again';
         startButn.classList.remove('hide');
+        currQuesIndex = 0;
+        
+        // questIndex.innerText = 1;     
+        // clearState();
     }
 }
+
+// Function to disable mouse click 
+
+// function disableClick(){
+//     let answerSection = document.getElementById("answerArea");
+//     answerSection.removeEventListener("click", disableClick);
+    // currScore+= 1;
+    // score.innerText=currScore;
+    
+// }
+
 //function which clears the old answers and question
 function clearState() {
 
@@ -109,6 +148,7 @@ function clearState() {
 function setQuizStatus(element, correct) {
     clearQuizStatus(element); // clears old status from the element
     if (correct) {
+        
         element.classList.add('correct');
 
     } else {
