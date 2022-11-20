@@ -160,6 +160,9 @@ The website was tested on the following browsers:
 * Microsoft Edge : Version 105.0.1343.53 (Official build) (64-bit)
 
 ## Manual Testing
+
+![Manual Testing](/assets/images/readmeimages/ManualTestingSheet.jpg "Manual Testing Image")
+
 * Main landing page throughout quiz which provides the basic layout with header, Start Button and quiz information, is responsive to smaller screens.
 * Start Button when pressed, brings to the questions screen with four answer buttons. 
 * Once answer is selected the page will provide the correct answer in Green color and wrong answers in Red color.
