@@ -23,8 +23,8 @@ The website can be viewed here. [Javascript Quiz](https://bijoykm.github.io/jsqu
 
 * ## As a Website User:
 1. To use the website to play the quiz with clear and informative buttons.
-2. Upon clicking on answers, the correct answer in shown in green color(hsl(163, 90%, 23%)) and wrong answer in light red color hsl(0, 89%, 65%).
-3. To use Next to go to the next question and to Exit button to goto the homepage.
+2. Upon clicking on answers, the correct answer in shown in green color(hsl(163, 90%, 23%)) and wrong answer in light red color hsl(0, 89%, 65%). If correct answer is chosen the Score value is incremented by 1.
+3. To use Next to go to the next question and to Exit button to goto the homepage. The question index is also incremented by 1 when the Next button is pressed.
 
 
 # 1. Strategy
@@ -136,7 +136,7 @@ At various stages JSHint Validator testing was done and returned no major errors
 
 ![JSHint Validator](/assets/images/readmeimages/script.jsValidator.jpg "script.js Validator Image")
 
-The variable questions is declared in questions.js. The exitQuiz() is used for the Exit Button click event.
+The variable questions is declared in questions.js. The variable score is declared in index.html.
 
 
 
