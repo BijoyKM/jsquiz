@@ -69,22 +69,23 @@ Verdana, Geneva, Tahoma, sans-serif font-family were used for this website.
 ### Question Page
 ![Question Page Image](/assets/images/readmeimages/Questionsscreen.jpg "Questions Page Image")
 
-* Provides questions and answer set. 
+* Provides questions and answer set. It provides question with index and current Score value as well.
 
 ### Answer Selection Page
 ![Answer Selection Page Image](/assets/images/readmeimages/answerSelectionPage.jpg "Answer Selection Page Image")
 
-* Once answer is selected the page will provide the correct answer in Green color and wrong answers in Red color. The Next and Exit button also appears after the answer selection.
+* Once answer is selected the page will provide the correct answer in Green color and wrong answers in Red color. The correct answer also increments the Score value. The Next and Exit button also appears after the answer selection. Once answer is selected the pointer events are set to none for the answer buttons, so that they cannot be clicked again.
 
 ### Exit Selection Page
 ![Exit Selection Page Image](/assets/images/readmeimages/exitSelectionPage.jpg "Exit Selection Page Image")
 
-* When Exit button is clicked it will prompt for confirmation. If Ok is pressed it will bring back to the Main Page.
+* When Exit button is clicked it will prompt for confirmation. If Ok is pressed it will bring back to the Main Page. This will reset the question index back to one and score value back to zero.
 
 ### Start Again Page
 ![Start Again Page Image](/assets/images/readmeimages/startAgainPage.jpg "Start Again Page Image")
 
-* When Start Again is clicked it will restart the quiz and bring back to Question Page.
+* This page will show the last page of questions with the final score value and the Start Again button.
+* When Start Again is clicked it will restart the quiz and bring back to Question Page. This will reset the question index back to one and score value back to zero.
 
 ### Footer Section
 ![Footer Section Image](/assets/images/readmeimages/footerSection.jpg "Footer Section Image")
@@ -95,7 +96,6 @@ Verdana, Geneva, Tahoma, sans-serif font-family were used for this website.
 * There are no known bugs in the project.
 
 *   ## Future Implementation
-* Unfortunately to time contraints the Score card option is not implemented. I would like to add it in the future implementation.
 * I would also love to add Help button to each question, when a wrong answer is selected. This will help the user to understand the concepts more.
 
 
@@ -163,9 +163,11 @@ The website was tested on the following browsers:
 * Main landing page throughout quiz which provides the basic layout with header, Start Button and quiz information, is responsive to smaller screens.
 * Start Button when pressed, brings to the questions screen with four answer buttons. 
 * Once answer is selected the page will provide the correct answer in Green color and wrong answers in Red color.
-* Next Button will bring to the next available question set.
-* Exit Button will confirm the action and exit the quiz.
-* On the last question page, Next and Exit buttons will be replaced by the Restart button. This will bring back to the Question Page.
+* The correct answer will increment the Score value.
+* Once answer is selected the pointer events are set to none for the answer buttons, so that they cannot be clicked again.
+* Next Button will bring to the next available question set. It will increment the question index as well.
+* Exit Button will confirm the action and exit the quiz. This will reset the question index back to one and score value back to zero.
+* On the last question page, Next and Exit buttons will be replaced by the Start Again button. This will bring back to the Question Page. This will also reset the question index back to one and score value back to zero.
 
 
 
