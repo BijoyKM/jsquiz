@@ -39,7 +39,7 @@ The website can be viewed here. [Javascript Quiz](https://bijoykm.github.io/jsqu
 # 3. Structure
 * Users will find that the single page website with four navigation buttons, which is common to most quiz websites, is simply laid out with easy organisation of information.
 * These are the Start, Next, Exit and Restart buttons.
-* Each question has four options, when clicked on the correct option the background color of that answer button turns to green color(hsl(163, 90%, 23%)). All wrong answers buttons are turned to light red color hsl(0, 89%, 65%).
+* Each question has four options, when clicked on the correct option the background color of that answer button turns to green color(hsl(163, 90%, 23%)) and the Score value is incremented by 1. All wrong answers buttons are turned to light red color hsl(0, 89%, 65%).
 * The footer section provides information on the disclaimer notice.
 
 # 4. Skeleton
